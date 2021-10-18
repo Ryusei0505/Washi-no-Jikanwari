@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C74B3659271D881D00073819 /* TimeTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74B3658271D881D00073819 /* TimeTableController.swift */; };
 		C7A8A3A527102044007965BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A8A3A427102044007965BD /* AppDelegate.swift */; };
 		C7A8A3A727102044007965BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A8A3A627102044007965BD /* SceneDelegate.swift */; };
 		C7A8A3A927102044007965BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A8A3A827102044007965BD /* ViewController.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C74B3658271D881D00073819 /* TimeTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableController.swift; sourceTree = "<group>"; };
 		C7A8A3A127102043007965BD /* Washi-no-Jikanwari.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Washi-no-Jikanwari.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7A8A3A427102044007965BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7A8A3A627102044007965BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 		C7A8A39827102043007965BD = {
 			isa = PBXGroup;
 			children = (
+				C74B3658271D881D00073819 /* TimeTableController.swift */,
 				C7A8A3A327102043007965BD /* Washi-no-Jikanwari */,
 				C7A8A3BA2710204E007965BD /* Washi-no-JikanwariTests */,
 				C7A8A3C52710204E007965BD /* Washi-no-JikanwariUITests */,
@@ -261,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C74B3659271D881D00073819 /* TimeTableController.swift in Sources */,
 				C7A8A3A927102044007965BD /* ViewController.swift in Sources */,
 				C7A8A3A527102044007965BD /* AppDelegate.swift in Sources */,
 				C7A8A3A727102044007965BD /* SceneDelegate.swift in Sources */,

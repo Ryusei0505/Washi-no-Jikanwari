@@ -7,43 +7,64 @@
 
 import UIKit
 
-class ViewController: UIViewController,UICollectionViewDataSource, UICollectionViewDelegate{
+class ViewController: UIViewController{
 
     
     @IBOutlet weak var collectionView: UICollectionView!
     
     @IBOutlet weak var CollectionViewFlowLayout: UICollectionViewFlowLayout!
-    
-    
-    //時間割セルの設定
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        collectionView.delegate=self
-        collectionView.dataSource = self
         
-        let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: 60, height: 100)
-        layout.minimumLineSpacing = 3.0
-        layout.minimumInteritemSpacing = 3.0
-        layout.sectionInset = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
-        collectionView.collectionViewLayout = layout
+    let timeTableCon = TimeTableController()
+        private let sideMargin: CGFloat = 10
+        //private let itemPerWidth: CGFloat = 6
+        private let itemSpacing: CGFloat = 5
+
+        override func viewDidLoad() {
+            super.viewDidLoad()
+            //ここを変更すると枠数を変える
+            timeTableCon.setTimeTableInfo(week: 7, flame: 7)
+            collectionView.dataSource = self
+            collectionView.delegate = self
+
+            let layout = UICollectionViewFlowLayout()
+            layout.sectionInset =
+                UIEdgeInsets(top: 10,
+                             left:sideMargin,
+                             bottom: 10,
+                             right:sideMargin)
+            layout.minimumInteritemSpacing = itemSpacing
+            collectionView.collectionViewLayout = layout
+
+        }
+
+
     }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 30 // 表示するセルの数
+
+    extension ViewController: UICollectionViewDataSource {
+        func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+            Int(timeTableCon.createFlameWork())
+        }
+
+        //時間割セルの表示
+        func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) // 表示するセルを登録
+            cell.backgroundColor = .white// セルの色
+            //cell.layer.borderWidth = 1.0//セルの枠組み(有無どっちでもいい)
+            return cell
+        }
     }
-    
-    //時間割セルの表示
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) // 表示するセルを登録
-        cell.backgroundColor = .white// セルの色
-        //cell.layer.borderWidth = 1.0//セルの枠組み(有無どっちでもいい)
-        return cell
-    }
-    
-    
-    
+
+    extension ViewController: UICollectionViewDelegateFlowLayout {
+        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+            // セルの割当に利用可能なwidth
+            // :親viewのwidth - 左右のマージン - セル間の水平方向の間隔 * (列数 - 1)
+            let availableWidth = (collectionView.frame.width - sideMargin * 2) - itemSpacing * (timeTableCon.getWeek() - 1)
+
+            // セル一つのwidth
+            let width = availableWidth/timeTableCon.getWeek()
+
+            return CGSize(width: width, height: width + 20)
+        }
     }
     
     
