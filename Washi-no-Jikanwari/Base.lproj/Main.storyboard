@@ -12,33 +12,33 @@
         <!--時間割-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Washi_no_Jikanwari" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="finish" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="Washi_no_Jikanwari" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="BfI-I8-EIb">
-                                <rect key="frame" x="30" y="109" width="355" height="744"/>
+                                <rect key="frame" x="30" y="125" width="370" height="751"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.85194944724058486" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="txV-Uj-CKW">
-                                    <size key="itemSize" width="128" height="37"/>
+                                    <size key="itemSize" width="123" height="163"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="qst-Ox-YnL">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="37"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="qst-Ox-YnL" customClass="CustomCell" customModule="Washi_no_Jikanwari" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="123" height="163"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="SYJ-uE-NWX">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="37"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="123" height="163"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <size key="customSize" width="128" height="37"/>
+                                        <size key="customSize" width="123" height="163"/>
                                         <connections>
-                                            <segue destination="put-x5-tjz" kind="showDetail" id="QOZ-II-dM1"/>
+                                            <segue destination="wMu-xI-aJf" kind="showDetail" identifier="Modall" id="dCL-X2-Xc6"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -49,7 +49,7 @@
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" white="0.84999999999999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" title="時間割" id="6FP-2r-Wzj">
@@ -60,16 +60,19 @@
                                 <segue destination="yFj-Ur-jBG" kind="presentation" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="PS7-t1-IBq"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="edit-button" id="gf8-3Z-z91"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="edit-button" id="gf8-3Z-z91">
+                            <connections>
+                                <segue destination="t5M-xM-M0J" kind="show" id="cXr-M1-A3c"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="CollectionViewFlowLayout" destination="txV-Uj-CKW" id="OYL-Pf-P52"/>
-                        <outlet property="collectionView" destination="BfI-I8-EIb" id="VxB-1U-roH"/>
+                        <outlet property="collectionView" destination="BfI-I8-EIb" id="Y4B-h2-lbd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1073.913043478261" y="110.49107142857143"/>
+            <point key="canvasLocation" x="853.62318840579712" y="122.54464285714285"/>
         </scene>
         <!--設定-->
         <scene sceneID="cCy-yV-i29">
@@ -133,23 +136,66 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vBU-6F-VS2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3338" y="-324"/>
+            <point key="canvasLocation" x="3424.6376811594205" y="-356.25"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="Q5r-WP-RTe">
+        <!--Edit-->
+        <scene sceneID="NPM-3E-BcX">
             <objects>
-                <viewController id="put-x5-tjz" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="C9K-XJ-DfF">
+                <viewController id="wMu-xI-aJf" customClass="Edit" customModule="Washi_no_Jikanwari" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="faR-VG-Iu2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="rsl-Vf-YCy"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tMN-sz-4IT">
+                                <rect key="frame" x="131" y="127" width="229" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CNo-K6-8kV">
+                                <rect key="frame" x="132" y="223" width="229" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="教室名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b4g-rG-wsS">
+                                <rect key="frame" x="71" y="231" width="52" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Etg-jO-euO">
+                                <rect key="frame" x="319" y="324" width="35" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="完了"/>
+                                <connections>
+                                    <action selector="comitButtom:" destination="wMu-xI-aJf" eventType="touchUpInside" id="53Q-8r-b4P"/>
+                                    <segue destination="ZrN-pz-7t6" kind="unwind" identifier="" unwindAction="returenSegueWithSegue:" id="Ead-OC-Ebc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="科目名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HaH-1h-lhx">
+                                <rect key="frame" x="67" y="132" width="52" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Qds-dN-5P3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="WyA-Tq-jo5"/>
+                    <navigationItem key="navigationItem" id="8rw-GX-zQ8"/>
+                    <connections>
+                        <outlet property="roomTextField" destination="CNo-K6-8kV" id="oPt-4b-zHo"/>
+                        <outlet property="subjectTextField" destination="tMN-sz-4IT" id="JOI-rE-bnr"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Tc2-7I-fga" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FBp-UD-Kts" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="ZrN-pz-7t6" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1086" y="827"/>
+            <point key="canvasLocation" x="837.68115942028987" y="819.64285714285711"/>
         </scene>
         <!--通知設定-->
         <scene sceneID="GiN-zl-Bfm">
@@ -186,16 +232,39 @@
         <!--時間割削除-->
         <scene sceneID="PZz-7u-Rb3">
             <objects>
-                <viewController id="vl4-8m-bOI" sceneMemberID="viewController">
+                <viewController id="vl4-8m-bOI" customClass="ResetViewController" customModule="Washi_no_Jikanwari" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DDA-gh-4eD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u4d-7Y-Qbb">
+                                <rect key="frame" x="184" y="276" width="37" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="はい"/>
+                                <connections>
+                                    <action selector="button:" destination="8DS-vC-WMt" eventType="touchUpInside" id="4pc-jf-b7C"/>
+                                    <action selector="reset:" destination="8DS-vC-WMt" eventType="touchUpInside" id="Vv7-P9-ntH"/>
+                                    <action selector="resetButton:" destination="vl4-8m-bOI" eventType="touchUpInside" id="KHk-Cj-aLb"/>
+                                    <action selector="resetButton:" destination="8DS-vC-WMt" eventType="touchUpInside" id="gxu-bi-aQg"/>
+                                    <segue destination="8DS-vC-WMt" kind="unwind" unwindAction="returenResetSegueWithSegue:" id="XI5-nn-XHi"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="時間割を削除します" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y5v-pf-TEj">
+                                <rect key="frame" x="81" y="218" width="256" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="7Qb-rR-giz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="時間割削除" id="4MB-dc-2LA"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gik-AA-zso" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="8DS-vC-WMt" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3341" y="324"/>
         </scene>
@@ -215,7 +284,66 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zcg-us-Iq6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="378" y="114"/>
+            <point key="canvasLocation" x="81" y="120"/>
+        </scene>
+        <!--Edit View Controller-->
+        <scene sceneID="9DO-8m-jBc">
+            <objects>
+                <viewController id="t5M-xM-M0J" customClass="EditViewController" customModule="Washi_no_Jikanwari" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CkU-hL-pr0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="eNn-3g-IhU">
+                                <rect key="frame" x="35" y="107" width="344" height="750"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" tag="1" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EditCell" id="KNi-8S-1tD">
+                                        <rect key="frame" x="0.0" y="49.5" width="344" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KNi-8S-1tD" id="KqN-lK-Luw">
+                                            <rect key="frame" x="0.0" y="0.0" width="344" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="xFf-Xd-LNb" kind="showDetail" id="dsn-ub-Z0L"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="t5M-xM-M0J" id="Xz1-db-l5H"/>
+                                    <outlet property="delegate" destination="t5M-xM-M0J" id="lxy-f3-Rrs"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yhn-d5-i97"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="uoR-er-H0T"/>
+                    <connections>
+                        <outlet property="EditTableView" destination="eNn-3g-IhU" id="gdA-Lj-wEn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ezq-Sz-EZs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1613.0434782608697" y="-592.63392857142856"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="uel-03-rqY">
+            <objects>
+                <viewController id="xFf-Xd-LNb" sceneMemberID="viewController">
+                    <view key="view" contentMode="bottom" id="jc8-V2-G8N">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="U4F-i5-sy0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RbS-su-MdQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2446" y="-599"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ao6-su-NTF">
