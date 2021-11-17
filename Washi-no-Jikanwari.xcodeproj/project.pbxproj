@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C70D6236272A6FE700B94BD9 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70D6235272A6FE700B94BD9 /* EditViewController.swift */; };
+		C7221891272BDE27003AE332 /* Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7221890272BDE27003AE332 /* Class.swift */; };
+		C74AA3C0273A69E500D7D582 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74AA3BE273A69E500D7D582 /* CustomCell.swift */; };
+		C74AA3C1273A69E500D7D582 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C74AA3BF273A69E500D7D582 /* CustomCell.xib */; };
+		C74AA3C3273BF22200D7D582 /* ResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74AA3C2273BF22200D7D582 /* ResetViewController.swift */; };
 		C74B3659271D881D00073819 /* TimeTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74B3658271D881D00073819 /* TimeTableController.swift */; };
 		C7A8A3A527102044007965BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A8A3A427102044007965BD /* AppDelegate.swift */; };
 		C7A8A3A727102044007965BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A8A3A627102044007965BD /* SceneDelegate.swift */; };
@@ -37,6 +42,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C70D6235272A6FE700B94BD9 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		C7221890272BDE27003AE332 /* Class.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Class.swift; sourceTree = "<group>"; };
+		C74AA3BE273A69E500D7D582 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		C74AA3BF273A69E500D7D582 /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
+		C74AA3C2273BF22200D7D582 /* ResetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetViewController.swift; sourceTree = "<group>"; };
 		C74B3658271D881D00073819 /* TimeTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableController.swift; sourceTree = "<group>"; };
 		C7A8A3A127102043007965BD /* Washi-no-Jikanwari.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Washi-no-Jikanwari.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7A8A3A427102044007965BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,7 +93,6 @@
 		C7A8A39827102043007965BD = {
 			isa = PBXGroup;
 			children = (
-				C74B3658271D881D00073819 /* TimeTableController.swift */,
 				C7A8A3A327102043007965BD /* Washi-no-Jikanwari */,
 				C7A8A3BA2710204E007965BD /* Washi-no-JikanwariTests */,
 				C7A8A3C52710204E007965BD /* Washi-no-JikanwariUITests */,
@@ -104,11 +113,17 @@
 		C7A8A3A327102043007965BD /* Washi-no-Jikanwari */ = {
 			isa = PBXGroup;
 			children = (
+				C74B3658271D881D00073819 /* TimeTableController.swift */,
 				C7A8A3A427102044007965BD /* AppDelegate.swift */,
 				C7A8A3A627102044007965BD /* SceneDelegate.swift */,
 				C7A8A3A827102044007965BD /* ViewController.swift */,
+				C7221890272BDE27003AE332 /* Class.swift */,
 				C7A8A3AA27102044007965BD /* Main.storyboard */,
+				C74AA3BE273A69E500D7D582 /* CustomCell.swift */,
+				C74AA3BF273A69E500D7D582 /* CustomCell.xib */,
+				C70D6235272A6FE700B94BD9 /* EditViewController.swift */,
 				C7A8A3D427103793007965BD /* MenuViewController.swift */,
+				C74AA3C2273BF22200D7D582 /* ResetViewController.swift */,
 				C7A8A3AD2710204D007965BD /* Assets.xcassets */,
 				C7A8A3AF2710204D007965BD /* LaunchScreen.storyboard */,
 				C7A8A3B22710204D007965BD /* Info.plist */,
@@ -239,6 +254,7 @@
 			files = (
 				C7A8A3B12710204D007965BD /* LaunchScreen.storyboard in Resources */,
 				C7A8A3AE2710204D007965BD /* Assets.xcassets in Resources */,
+				C74AA3C1273A69E500D7D582 /* CustomCell.xib in Resources */,
 				C7A8A3AC27102044007965BD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,9 +281,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C74B3659271D881D00073819 /* TimeTableController.swift in Sources */,
+				C74AA3C3273BF22200D7D582 /* ResetViewController.swift in Sources */,
 				C7A8A3A927102044007965BD /* ViewController.swift in Sources */,
+				C70D6236272A6FE700B94BD9 /* EditViewController.swift in Sources */,
+				C7221891272BDE27003AE332 /* Class.swift in Sources */,
 				C7A8A3A527102044007965BD /* AppDelegate.swift in Sources */,
 				C7A8A3A727102044007965BD /* SceneDelegate.swift in Sources */,
+				C74AA3C0273A69E500D7D582 /* CustomCell.swift in Sources */,
 				C7A8A3D527103793007965BD /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
